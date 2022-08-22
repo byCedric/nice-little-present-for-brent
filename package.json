@@ -5,9 +5,15 @@
     "apps/*",
     "packages/*"
   ],
+  "devDependencies": {
+    "turbo": "^1.4.3",
+    "typescript": "^4.7.4"
+  },
   "pnpm": {
     "peerDependencyRules": {
-      "ignoreMissing": ["@babel/*"]
+      "ignoreMissing": [
+        "@babel/*"
+      ]
     }
   }
 }

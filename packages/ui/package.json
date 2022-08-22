@@ -18,8 +18,7 @@
     "@types/react-native": "~0.69.4",
     "react": "18.0.0",
     "react-native": "0.69.4",
-    "tsup": "^6.2.2",
-    "typescript": "^4.7.4"
+    "tsup": "^6.2.2"
   },
   "pnpm": {
     "peerDependencyRules": {
