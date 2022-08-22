@@ -1,0 +1,38 @@
+{ 
+  "private": true,
+  "name": "@acme/ui",
+  "version": "1.0.0",
+  "main": "./build/index.js",
+  "module": "./build/index.mjs",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "dev": "tsup ./src --watch",
+    "build": "tsup ./src",
+    "clean": "git clean ./build -xdf"
+  },
+  "devDependencies": {
+    "@types/react": "~18.0.0",
+    "@types/react-native": "~0.69.4",
+    "react": "18.0.0",
+    "react-native": "0.69.4",
+    "tsup": "^6.2.2",
+    "typescript": "^4.7.4"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": ["@babel/*"]
+    }
+  },
+  "tsup": {
+    "clean": true,
+    "dts": true,
+    "entry": ["src/index.ts"],
+    "external": ["react", "react-native"],
+    "outDir": "build",
+    "sourcemap": true,
+    "splitting": false
+  }
+}

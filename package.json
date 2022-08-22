@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "@acme/monorepo",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": ["@babel/*"]
+    }
+  }
+}
