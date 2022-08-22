@@ -22,7 +22,9 @@
   },
   "pnpm": {
     "peerDependencyRules": {
-      "ignoreMissing": ["@babel/*"]
+      "ignoreMissing": [
+        "@babel/*"
+      ]
     }
   },
   "tsup": {
