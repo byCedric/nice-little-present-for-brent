@@ -20,13 +20,6 @@
     "react-native": "0.69.4",
     "tsup": "^6.2.2"
   },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "@babel/*"
-      ]
-    }
-  },
   "tsup": {
     "clean": true,
     "dts": true,
