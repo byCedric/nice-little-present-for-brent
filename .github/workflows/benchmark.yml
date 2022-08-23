@@ -270,7 +270,7 @@ jobs:
         run: yarn set version berry && yarn --version
 
       - name: 📦 Install dependencies
-        run: yarn install 
+        run: yarn install --no-immutable
 
       - name: 👷 Build project
         run: yarn run build
