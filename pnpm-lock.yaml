@@ -122,11 +122,13 @@ importers:
       next-transpile-modules: ^9.0.0
       react: 18.2.0
       react-dom: 18.2.0
+      react-native-web: ~0.18.7
     dependencies:
       '@acme/ui': link:../../packages/ui
       next: 12.2.5_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      react-native-web: 0.18.7_biqbaboplfbrettd7655fr4n2y
     devDependencies:
       babel-plugin-react-native-web: 0.18.7
       eslint: 8.22.0
@@ -8781,6 +8783,25 @@ packages:
       prop-types: 15.8.1
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
+  /react-native-web/0.18.7_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-5DwcsrAqLjOvzJJk/XPozEtqCOF3hrCJ55buLOEPMxvS8lKxRdeMF9SZUI2zyqE8JcMFGtQzLhWAZGeaTrXaRg==}
+    peerDependencies:
+      react: ^17.0.2 || ^18.0.0
+      react-dom: ^17.0.2 || ^18.0.0
+    dependencies:
+      '@babel/runtime': 7.18.9
+      create-react-class: 15.7.0
+      fbjs: 3.0.4
+      inline-style-prefixer: 6.0.1
+      normalize-css-color: 1.0.2
+      postcss-value-parser: 4.2.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      styleq: 0.1.2
     transitivePeerDependencies:
       - encoding
     dev: false
