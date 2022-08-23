@@ -109,6 +109,11 @@ jobs:
 
       - name: 👷 Build project
         run: npm run build
+
+      - name: 🚀 Publish to Expo
+        if: ${{ !github.event.number && matrix.app != 'web' }}
+        working-directory: apps/${{ matrix.app }}
+        run: npm run publish --non-interactive
       
       - name: 🚀 Publish preview to Expo
         if: ${{ github.event.number && matrix.app != 'web' }}
@@ -234,6 +239,11 @@ jobs:
 
       - name: 👷 Build project
         run: pnpm build
+
+      - name: 🚀 Publish to Expo
+        if: ${{ !github.event.number && matrix.app != 'web' }}
+        working-directory: apps/${{ matrix.app }}
+        run: pnpm publish --non-interactive
       
       - name: 🚀 Publish preview to Expo 
         if: ${{ github.event.number && matrix.app != 'web' }}
@@ -291,7 +301,12 @@ jobs:
         run: yarn install 
 
       - name: 👷 Build project
-        run: yarn run build
+        run: yarn build
+
+      - name: 🚀 Publish to Expo
+        if: ${{ !github.event.number && matrix.app != 'web' }}
+        working-directory: apps/${{ matrix.app }}
+        run: yarn publish --non-interactive
       
       - name: 🚀 Publish preview to Expo
         if: ${{ github.event.number && matrix.app != 'web' }}
@@ -349,7 +364,12 @@ jobs:
         run: yarn install --no-immutable
 
       - name: 👷 Build project
-        run: yarn run build
+        run: yarn build
+      
+      - name: 🚀 Publish to Expo
+        if: ${{ !github.event.number && matrix.app != 'web' }}
+        working-directory: apps/${{ matrix.app }}
+        run: yarn publish --non-interactive
       
       - name: 🚀 Publish preview to Expo
         if: ${{ github.event.number && matrix.app != 'web' }}
