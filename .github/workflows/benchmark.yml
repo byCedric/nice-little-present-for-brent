@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   npm-v7:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         app:
@@ -51,7 +51,7 @@ jobs:
         run: npx expo export --public-url http:/127.0.0.1:8000 --experimental-bundle
   
   npm-v8:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         app:
@@ -89,7 +89,7 @@ jobs:
         run: npm run export --public-url http:/127.0.0.1:8000 --experimental-bundle
   
   pnpm-v6:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         app:
@@ -129,10 +129,7 @@ jobs:
         run: pnpm export --public-url http:/127.0.0.1:8000 --experimental-bundle
 
   pnpm-v7:
-    runs-on: ${{ matrix.os }}
-    defaults:
-      run: 
-        working-directory: pnpm-v7
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         app:
@@ -145,7 +142,7 @@ jobs:
       - name: 🏗 Setup repo
         uses: actions/checkout@v3
       
-       - name: 🏗 Setup pnpm v7
+      - name: 🏗 Setup pnpm v7
         uses: pnpm/action-setup@v2
         with:
           version: ^7
@@ -172,7 +169,7 @@ jobs:
         run: pnpm export --public-url http:/127.0.0.1:8000 --experimental-bundle
   
   yarn-v1:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         app:
@@ -210,7 +207,7 @@ jobs:
         run: yarn export --public-url http:/127.0.0.1:8000 --experimental-bundle
   
   yarn-v2:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         app:
