@@ -222,7 +222,7 @@ jobs:
           expo-version: latest
 
       - name: 🏗 Setup yarn
-        run: yarn install -g yarn@^1 && yarn --version
+        run: npm install -g yarn@^1 && yarn --version
 
       - name: 📦 Install dependencies
         run: yarn install 
