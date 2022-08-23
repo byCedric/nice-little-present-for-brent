@@ -2628,7 +2628,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-native@~0.64.12":
+"@types/react-native@~0.64.12", "@types/react-native@~0.64.26":
   version "0.64.26"
   resolved "https://registry.npmjs.org/@types/react-native/-/react-native-0.64.26.tgz"
   integrity sha512-L1U0+wM7GSq1uGu6d/Z9wKB705xyr7Pg47JiXjp9P8DZAFpqP4xsEM/PQ8hcCopEupo6ltQ8ipqoDJ4Nb9Lw5Q==
@@ -2642,14 +2642,14 @@
   dependencies:
     "@types/react" "^17"
 
-"@types/react-native@~0.69.1", "@types/react-native@~0.69.4":
+"@types/react-native@~0.69.1":
   version "0.69.5"
   resolved "https://registry.npmjs.org/@types/react-native/-/react-native-0.69.5.tgz"
   integrity sha512-mSUCuGUsW2kJlZiu4GmdYVDKZX/52iyC9rm6dxAmflJj1b7kSO/CMSDy5WbcfS8QerxTqbYGTrIwHD0GnXHzbQ==
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^17", "@types/react@~17.0.21":
+"@types/react@*", "@types/react@^17", "@types/react@~17.0.0", "@types/react@~17.0.21":
   version "17.0.48"
   resolved "https://registry.npmjs.org/@types/react/-/react-17.0.48.tgz"
   integrity sha512-zJ6IYlJ8cYYxiJfUaZOQee4lh99mFihBoqkOSEGV+dFi9leROW6+PgstzQ+w3gWTnUfskALtQPGHK6dYmPj+2A==
@@ -2658,7 +2658,7 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@^18.0.0", "@types/react@~18.0.0", "@types/react@~18.0.14":
+"@types/react@^18.0.0", "@types/react@~18.0.14":
   version "18.0.17"
   resolved "https://registry.npmjs.org/@types/react/-/react-18.0.17.tgz"
   integrity sha512-38ETy4tL+rn4uQQi7mB81G7V1g0u2ryquNmsVIOKUAEIDK+3CUjZ6rSRpdvS99dNBnkLFL83qfmtLacGOTIhwQ==
@@ -11368,7 +11368,7 @@ react-native-web@~0.18.7:
     postcss-value-parser "^4.2.0"
     styleq "^0.1.2"
 
-react-native@0.64.3:
+react-native@0.64.26, react-native@0.64.3:
   version "0.64.3"
   resolved "https://registry.npmjs.org/react-native/-/react-native-0.64.3.tgz"
   integrity sha512-2OEU74U0Ek1/WeBzPbg6XDsCfjF/9fhrNX/5TFgEiBKd5mNc9LOZ/OlMmkb7iues/ZZ/oc51SbEfLRQdcW0fVw==

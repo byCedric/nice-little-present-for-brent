@@ -73,6 +73,7 @@ jobs:
           name: npm-v8-${{ matrix.app }}
           path: |
             apps/${{matrix.app}}/web-build
+            apps/${{matrix.app}}/dist
             apps/${{matrix.app}}/out
 
   pnpm-v7:
@@ -138,6 +139,7 @@ jobs:
           name: pnpm-v7-${{ matrix.app }}
           path: |
             apps/${{matrix.app}}/web-build
+            apps/${{matrix.app}}/dist
             apps/${{matrix.app}}/out
   
   yarn-v1:
@@ -201,6 +203,7 @@ jobs:
           name: yarn-v1-${{ matrix.app }}
           path: |
             apps/${{matrix.app}}/web-build
+            apps/${{matrix.app}}/dist
             apps/${{matrix.app}}/out
   
   yarn-v2:
@@ -264,4 +267,5 @@ jobs:
           name: yarn-v2-${{ matrix.app }}
           path: |
             apps/${{matrix.app}}/web-build
+            apps/${{matrix.app}}/dist
             apps/${{matrix.app}}/out
