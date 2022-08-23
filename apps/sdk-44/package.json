@@ -8,7 +8,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "export": "expo export --public-url http:/127.0.0.1:8000 --experimental-bundle"
   },
   "dependencies": {
     "@acme/ui": "*",
