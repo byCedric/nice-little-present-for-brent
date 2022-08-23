@@ -19,6 +19,15 @@ module.exports = withTranspile({
       "react-native$": 'react-native-web', 
     };
 
+    // workaround for Yarn Berry, it tries to resolve react-native-web from @acme/ui
+    if (process.env.YARN_WORKAROUND) {
+      config.resolve.modules = [
+        path.resolve(__dirname, 'node_modules'),
+        path.resolve(__dirname, '../../node_modules'),
+        path.resolve(__dirname, '../../packages/ui/node_modules'),
+      ];
+    }
+
     config.resolve.extensions = [
       ".web.ts",
       ".web.tsx",

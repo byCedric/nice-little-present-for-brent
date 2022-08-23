@@ -41,6 +41,9 @@ jobs:
       - name: 🏗 Setup npm
         run: npm install -g npm@^8 && npm --version
 
+      - name: 🏗 Remove non-npm files
+        run: rm -rf .yarnrc .yarnrc.yaml pnpm-lock.yaml pnpm-workspace.yaml yarn.lock
+
       - name: 📦 Install dependencies
         run: npm install 
 
@@ -106,6 +109,9 @@ jobs:
         with:
           expo-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
+      
+      - name: 🏗 Remove non-pnpm files
+        run: rm -rf .yarnrc .yarnrc.yaml package-lock.json yarn.lock
   
       - name: 📦 Install dependencies
         run: pnpm install --no-frozen-lockfile
@@ -170,6 +176,9 @@ jobs:
 
       - name: 🏗 Setup yarn
         run: npm install -g yarn@^1 && yarn --version
+      
+      - name: 🏗 Remove non-yarn-1 files
+        run: rm -rf .yarnrc.yml pnpm-lock.yaml pnpm-workspace.yaml package-lock.json yarn.lock
 
       - name: 📦 Install dependencies
         run: yarn install 
@@ -232,6 +241,9 @@ jobs:
           expo-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
+      - name: 🏗 Remove non-yarn-2 files
+        run: rm -rf pnpm-lock.yaml pnpm-workspace.yaml package-lock.json
+
       - name: 🏗 Setup yarn
         run: yarn set version berry && yarn --version
 
@@ -240,6 +252,8 @@ jobs:
 
       - name: 👷 Build project
         run: yarn run build
+        env:
+          YARN_WORKAROUND: true
       
       - name: 🚀 Publish to Expo
         if: ${{ !github.event.number && matrix.app != 'web' }}
