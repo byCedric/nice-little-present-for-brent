@@ -27,8 +27,5 @@
     "@react-native/normalize-color": "1.0.0",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12"
-  },
-  "installConfig": {
-    "hoistingLimits": "workspaces"
   }
 }
