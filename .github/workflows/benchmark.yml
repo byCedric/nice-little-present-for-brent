@@ -36,7 +36,7 @@ jobs:
         uses: expo/expo-github-action@v7
         with:
           expo-version: latest
-          expo-token: ${{ secrets.EXPO_TOKEN }}
+          token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 🏗 Setup npm
         run: npm install -g npm@^7 && npm --version
@@ -99,7 +99,7 @@ jobs:
         uses: expo/expo-github-action@v7
         with:
           expo-version: latest
-          expo-token: ${{ secrets.EXPO_TOKEN }}
+          token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 🏗 Setup npm
         run: npm install -g npm@^8 && npm --version
@@ -167,7 +167,7 @@ jobs:
         uses: expo/expo-github-action@v7
         with:
           expo-version: latest
-          expo-token: ${{ secrets.EXPO_TOKEN }}
+          token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 📦 Install dependencies
         run: pnpm install --no-frozen-lockfile
@@ -232,7 +232,7 @@ jobs:
         uses: expo/expo-github-action@v7
         with:
           expo-version: latest
-          expo-token: ${{ secrets.EXPO_TOKEN }}
+          token: ${{ secrets.EXPO_TOKEN }}
   
       - name: 📦 Install dependencies
         run: pnpm install --no-frozen-lockfile
@@ -292,7 +292,7 @@ jobs:
         uses: expo/expo-github-action@v7
         with:
           expo-version: latest
-          expo-token: ${{ secrets.EXPO_TOKEN }}
+          token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 🏗 Setup yarn
         run: npm install -g yarn@^1 && yarn --version
@@ -355,7 +355,7 @@ jobs:
         uses: expo/expo-github-action@v7
         with:
           expo-version: latest
-          expo-token: ${{ secrets.EXPO_TOKEN }}
+          token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 🏗 Setup yarn
         run: yarn set version berry && yarn --version
