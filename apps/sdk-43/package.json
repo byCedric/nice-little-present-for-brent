@@ -10,7 +10,7 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "export": "expo --version && expo export --public-url http:/127.0.0.1:8000 --experimental-bundle",
-    "publish": "expo-cli publish --non-interactive"
+    "publish": "expo-cli publish"
   },
   "dependencies": {
     "@acme/ui": "*",
