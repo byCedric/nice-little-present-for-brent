@@ -46,6 +46,11 @@ jobs:
 
       - name: 👷 Build project
         run: npm run build
+
+      - name: 🚀 Publish to Expo
+        if: ${{ !github.event.number && matrix.app != 'web' }}
+        working-directory: apps/${{ matrix.app }}
+        run: npm run publish --non-interactive
       
       - name: 🚀 Publish preview to Expo
         if: ${{ github.event.number && matrix.app != 'web' }}
@@ -166,7 +171,7 @@ jobs:
         run: pnpm run build
 
       - name: 🚀 Publish to Expo
-        if: ${{ github.event.number && matrix.app != 'web' }}
+        if: ${{ !github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
         run: pnpm publish --non-interactive
       
