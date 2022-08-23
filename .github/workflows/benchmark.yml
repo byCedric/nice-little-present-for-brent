@@ -50,12 +50,12 @@ jobs:
       - name: 🚀 Publish to Expo
         if: ${{ !github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: npm run publish
+        run: npm run publish --non-interactive
       
       - name: 🚀 Publish preview to Expo
         if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: npm run publish --release-channel=pr-${{ github.event.number }}
+        run: npm run publish --non-interactive --release-channel=pr-${{ github.event.number }}
 
       - name: 💬 Comment in preview
         if: ${{ github.event.number && matrix.app != 'web' }}
@@ -113,12 +113,12 @@ jobs:
       - name: 🚀 Publish to Expo
         if: ${{ !github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: npm run publish
+        run: npm run publish --non-interactive
       
       - name: 🚀 Publish preview to Expo
         if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: npm run publish --release-channel=pr-${{ github.event.number }}
+        run: npm run publish --non-interactive --release-channel=pr-${{ github.event.number }}
 
       - name: 💬 Comment in preview
         if: ${{ github.event.number && matrix.app != 'web' }}
@@ -178,12 +178,12 @@ jobs:
       - name: 🚀 Publish to Expo
         if: ${{ !github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: pnpm publish
+        run: pnpm run publish --non-interactive
       
       - name: 🚀 Publish preview to Expo
         if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: pnpm publish --release-channel=pr-${{ github.event.number }}
+        run: pnpm run publish --non-interactive --release-channel=pr-${{ github.event.number }}
 
       - name: 💬 Comment in preview
         if: ${{ github.event.number && matrix.app != 'web' }}
@@ -194,7 +194,7 @@ jobs:
 
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
-        run: pnpm export
+        run: pnpm run export
       
       - uses: actions/upload-artifact@v3
         with:
@@ -238,17 +238,17 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: 👷 Build project
-        run: pnpm build
+        run: pnpm run build
 
       - name: 🚀 Publish to Expo
         if: ${{ !github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: pnpm publish
+        run: pnpm run publish --non-interactive
       
       - name: 🚀 Publish preview to Expo 
         if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: pnpm publish --release-channel=pr-${{ github.event.number }}
+        run: pnpm run publish --non-interactive --release-channel=pr-${{ github.event.number }}
 
       - name: 💬 Comment in preview
         if: ${{ github.event.number && matrix.app != 'web' }}
@@ -259,7 +259,7 @@ jobs:
 
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
-        run: pnpm export
+        run: pnpm run export
       
       - uses: actions/upload-artifact@v3
         with:
@@ -301,17 +301,17 @@ jobs:
         run: yarn install 
 
       - name: 👷 Build project
-        run: yarn build
+        run: yarn run build
 
       - name: 🚀 Publish to Expo
         if: ${{ !github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: yarn publish
+        run: yarn run publish --non-interactive
       
       - name: 🚀 Publish preview to Expo
         if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: yarn publish --release-channel=pr-${{ github.event.number }}
+        run: yarn run publish --non-interactive --release-channel=pr-${{ github.event.number }}
 
       - name: 💬 Comment in preview
         if: ${{ github.event.number && matrix.app != 'web' }}
@@ -322,7 +322,7 @@ jobs:
 
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
-        run: yarn export
+        run: yarn run export
 
       - uses: actions/upload-artifact@v3
         with:
@@ -364,17 +364,17 @@ jobs:
         run: yarn install --no-immutable
 
       - name: 👷 Build project
-        run: yarn build
+        run: yarn run build
       
       - name: 🚀 Publish to Expo
         if: ${{ !github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: yarn publish
+        run: yarn run publish --non-interactive
       
       - name: 🚀 Publish preview to Expo
         if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: yarn publish --release-channel=pr-${{ github.event.number }}
+        run: yarn run publish --non-interactive --release-channel=pr-${{ github.event.number }}
 
       - name: 💬 Comment in preview
         if: ${{ github.event.number && matrix.app != 'web' }}
@@ -385,7 +385,7 @@ jobs:
 
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
-        run: yarn export
+        run: yarn run export
       
       - uses: actions/upload-artifact@v3
         with:
