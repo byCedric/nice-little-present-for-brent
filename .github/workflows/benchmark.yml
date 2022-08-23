@@ -47,8 +47,8 @@ jobs:
       - name: 👷 Build project
         run: npm run build
       
-      - name: 🚀 Publish to Expo
-        if: ${{ matrix.app != 'web' }}
+      - name: 🚀 Publish preview to Expo
+        if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
         run: npm run publish --release-channel=pr-${{ github.event.number }} --non-interactive
 
@@ -105,8 +105,8 @@ jobs:
       - name: 👷 Build project
         run: npm run build
       
-      - name: 🚀 Publish to Expo
-        if: ${{ matrix.app != 'web' }}
+      - name: 🚀 Publish preview to Expo
+        if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
         run: npm run publish --release-channel=pr-${{ github.event.number }} --non-interactive
 
@@ -164,9 +164,14 @@ jobs:
 
       - name: 👷 Build project
         run: pnpm run build
-      
+
       - name: 🚀 Publish to Expo
-        if: ${{ matrix.app != 'web' }}
+        if: ${{ github.event.number && matrix.app != 'web' }}
+        working-directory: apps/${{ matrix.app }}
+        run: pnpm publish --non-interactive
+      
+      - name: 🚀 Publish preview to Expo
+        if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
         run: pnpm publish --release-channel=pr-${{ github.event.number }} --non-interactive
 
@@ -225,8 +230,8 @@ jobs:
       - name: 👷 Build project
         run: pnpm build
       
-      - name: 🚀 Publish to Expo
-        if: ${{ matrix.app != 'web' }}
+      - name: 🚀 Publish preview to Expo 
+        if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
         run: pnpm publish --release-channel=pr-${{ github.event.number }} --non-interactive
 
@@ -283,8 +288,8 @@ jobs:
       - name: 👷 Build project
         run: yarn run build
       
-      - name: 🚀 Publish to Expo
-        if: ${{ matrix.app != 'web' }}
+      - name: 🚀 Publish preview to Expo
+        if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
         run: yarn publish --release-channel=pr-${{ github.event.number }} --non-interactive
 
@@ -341,8 +346,8 @@ jobs:
       - name: 👷 Build project
         run: yarn run build
       
-      - name: 🚀 Publish to Expo
-        if: ${{ matrix.app != 'web' }}
+      - name: 🚀 Publish preview to Expo
+        if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
         run: yarn publish --release-channel=pr-${{ github.event.number }} --non-interactive
 
