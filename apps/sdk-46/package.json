@@ -9,7 +9,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "export": "expo --version && expo export:web",
-    "publish": "expo-cli publish"
+    "publish-app": "expo-cli publish"
   },
   "dependencies": {
     "@acme/ui": "*",
