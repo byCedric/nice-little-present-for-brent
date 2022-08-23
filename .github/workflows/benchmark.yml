@@ -206,7 +206,7 @@ jobs:
             apps/${{matrix.app}}/dist
             apps/${{matrix.app}}/out
   
-  yarn-v2:
+  yarn-v3:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -264,7 +264,7 @@ jobs:
       
       - uses: actions/upload-artifact@v3
         with:
-          name: yarn-v2-${{ matrix.app }}
+          name: yarn-v3-${{ matrix.app }}
           path: |
             apps/${{matrix.app}}/web-build
             apps/${{matrix.app}}/dist

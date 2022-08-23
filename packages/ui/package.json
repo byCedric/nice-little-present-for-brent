@@ -1,4 +1,4 @@
-{ 
+{
   "private": true,
   "name": "@acme/ui",
   "version": "1.0.0",
@@ -20,11 +20,24 @@
     "react-native": "0.69.4",
     "tsup": "^6.2.2"
   },
+  "peerDependencies": {
+    "react-native-web": "*"
+  },
+  "peerDependenciesMeta": {
+    "react-native-web": {
+      "optional": true
+    }
+  },
   "tsup": {
     "clean": true,
     "dts": true,
-    "entry": ["src/index.ts"],
-    "external": ["react", "react-native"],
+    "entry": [
+      "src/index.ts"
+    ],
+    "external": [
+      "react",
+      "react-native"
+    ],
     "outDir": "build",
     "sourcemap": true,
     "splitting": false
