@@ -36,6 +36,7 @@ jobs:
         uses: expo/expo-github-action@v7
         with:
           expo-version: latest
+          expo-token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 🏗 Setup npm
         run: npm install -g npm@^7 && npm --version
@@ -45,6 +46,18 @@ jobs:
 
       - name: 👷 Build project
         run: npm run build
+      
+      - name: 🚀 Publish to Expo
+        if: ${{ matrix.app != 'web' }}
+        working-directory: apps/${{ matrix.app }}
+        run: npm run publish --release-channel=pr-${{ github.event.number }} --non-interactive
+
+      - name: 💬 Comment in preview
+        if: ${{ github.event.number && matrix.app != 'web' }}
+        uses: expo/expo-github-action/preview-comment@v7
+        with:
+          channel: pr-${{ github.event.number }}
+          project: apps/${{ matrix.app }}
 
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
@@ -54,7 +67,7 @@ jobs:
         with:
           name: npm-v7-${{ matrix.app }}
           path: |
-            apps/${{matrix.app}}/dist
+            apps/${{matrix.app}}/web-build
             apps/${{matrix.app}}/out
   
   npm-v8:
@@ -81,6 +94,7 @@ jobs:
         uses: expo/expo-github-action@v7
         with:
           expo-version: latest
+          expo-token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 🏗 Setup npm
         run: npm install -g npm@^8 && npm --version
@@ -90,6 +104,18 @@ jobs:
 
       - name: 👷 Build project
         run: npm run build
+      
+      - name: 🚀 Publish to Expo
+        if: ${{ matrix.app != 'web' }}
+        working-directory: apps/${{ matrix.app }}
+        run: npm run publish --release-channel=pr-${{ github.event.number }} --non-interactive
+
+      - name: 💬 Comment in preview
+        if: ${{ github.event.number && matrix.app != 'web' }}
+        uses: expo/expo-github-action/preview-comment@v7
+        with:
+          channel: pr-${{ github.event.number }}
+          project: apps/${{ matrix.app }}
 
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
@@ -99,7 +125,7 @@ jobs:
         with:
           name: npm-v8-${{ matrix.app }}
           path: |
-            apps/${{matrix.app}}/dist
+            apps/${{matrix.app}}/web-build
             apps/${{matrix.app}}/out
   
   pnpm-v6:
@@ -131,12 +157,25 @@ jobs:
         uses: expo/expo-github-action@v7
         with:
           expo-version: latest
+          expo-token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 📦 Install dependencies
         run: pnpm install
 
       - name: 👷 Build project
         run: pnpm run build
+      
+      - name: 🚀 Publish to Expo
+        if: ${{ matrix.app != 'web' }}
+        working-directory: apps/${{ matrix.app }}
+        run: pnpm publish --release-channel=pr-${{ github.event.number }} --non-interactive
+
+      - name: 💬 Comment in preview
+        if: ${{ github.event.number && matrix.app != 'web' }}
+        uses: expo/expo-github-action/preview-comment@v7
+        with:
+          channel: pr-${{ github.event.number }}
+          project: apps/${{ matrix.app }}
 
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
@@ -146,7 +185,7 @@ jobs:
         with:
           name: pnpm-v6-${{ matrix.app }}
           path: |
-            apps/${{matrix.app}}/dist
+            apps/${{matrix.app}}/web-build
             apps/${{matrix.app}}/out
 
   pnpm-v7:
@@ -178,12 +217,25 @@ jobs:
         uses: expo/expo-github-action@v7
         with:
           expo-version: latest
+          expo-token: ${{ secrets.EXPO_TOKEN }}
   
       - name: 📦 Install dependencies
         run: pnpm install
 
       - name: 👷 Build project
         run: pnpm build
+      
+      - name: 🚀 Publish to Expo
+        if: ${{ matrix.app != 'web' }}
+        working-directory: apps/${{ matrix.app }}
+        run: pnpm publish --release-channel=pr-${{ github.event.number }} --non-interactive
+
+      - name: 💬 Comment in preview
+        if: ${{ github.event.number && matrix.app != 'web' }}
+        uses: expo/expo-github-action/preview-comment@v7
+        with:
+          channel: pr-${{ github.event.number }}
+          project: apps/${{ matrix.app }}
 
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
@@ -193,7 +245,7 @@ jobs:
         with:
           name: pnpm-v7-${{ matrix.app }}
           path: |
-            apps/${{matrix.app}}/dist
+            apps/${{matrix.app}}/web-build
             apps/${{matrix.app}}/out
   
   yarn-v1:
@@ -220,6 +272,7 @@ jobs:
         uses: expo/expo-github-action@v7
         with:
           expo-version: latest
+          expo-token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 🏗 Setup yarn
         run: npm install -g yarn@^1 && yarn --version
@@ -229,6 +282,18 @@ jobs:
 
       - name: 👷 Build project
         run: yarn run build
+      
+      - name: 🚀 Publish to Expo
+        if: ${{ matrix.app != 'web' }}
+        working-directory: apps/${{ matrix.app }}
+        run: yarn publish --release-channel=pr-${{ github.event.number }} --non-interactive
+
+      - name: 💬 Comment in preview
+        if: ${{ github.event.number && matrix.app != 'web' }}
+        uses: expo/expo-github-action/preview-comment@v7
+        with:
+          channel: pr-${{ github.event.number }}
+          project: apps/${{ matrix.app }}
 
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
@@ -238,7 +303,7 @@ jobs:
         with:
           name: yarn-v1-${{ matrix.app }}
           path: |
-            apps/${{matrix.app}}/dist
+            apps/${{matrix.app}}/web-build
             apps/${{matrix.app}}/out
   
   yarn-v2:
@@ -265,6 +330,7 @@ jobs:
         uses: expo/expo-github-action@v7
         with:
           expo-version: latest
+          expo-token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 🏗 Setup yarn
         run: yarn set version berry && yarn --version
@@ -274,6 +340,18 @@ jobs:
 
       - name: 👷 Build project
         run: yarn run build
+      
+      - name: 🚀 Publish to Expo
+        if: ${{ matrix.app != 'web' }}
+        working-directory: apps/${{ matrix.app }}
+        run: yarn publish --release-channel=pr-${{ github.event.number }} --non-interactive
+
+      - name: 💬 Comment in preview
+        if: ${{ github.event.number && matrix.app != 'web' }}
+        uses: expo/expo-github-action/preview-comment@v7
+        with:
+          channel: pr-${{ github.event.number }}
+          project: apps/${{ matrix.app }}
 
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
@@ -283,5 +361,5 @@ jobs:
         with:
           name: yarn-v2-${{ matrix.app }}
           path: |
-            apps/${{matrix.app}}/dist
+            apps/${{matrix.app}}/web-build
             apps/${{matrix.app}}/out
