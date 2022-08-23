@@ -20,10 +20,6 @@
     "react-native": "0.69.4",
     "tsup": "^6.2.2"
   },
-  "resolutions": {
-    "@types/react": "~18.0.0",
-    "@types/react-native": "~0.69.4"
-  },
   "tsup": {
     "clean": true,
     "dts": true,
