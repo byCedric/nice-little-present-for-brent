@@ -14,11 +14,15 @@
     "clean": "git clean ./build -xdf"
   },
   "devDependencies": {
-    "@types/react": "~17.0.0",
-    "@types/react-native": "~0.64.26",
+    "@types/react": "~18.0.0",
+    "@types/react-native": "~0.69.4",
     "react": "18.0.0",
-    "react-native": "0.64.3",
+    "react-native": "0.69.4",
     "tsup": "^6.2.2"
+  },
+  "resolutions": {
+    "@types/react": "~18.0.0",
+    "@types/react-native": "~0.69.4"
   },
   "tsup": {
     "clean": true,
