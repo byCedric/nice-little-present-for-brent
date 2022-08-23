@@ -253,7 +253,7 @@ jobs:
       - name: 👷 Build project
         run: yarn run build
         env:
-          YARN_WORKAROUND: true
+          DONT_USE_YARN_BERRY_ITS_NOT_GOOD: true
       
       - name: 🚀 Publish to Expo
         if: ${{ !github.event.number && matrix.app != 'web' }}
@@ -275,6 +275,8 @@ jobs:
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
         run: yarn run export
+        env:
+          DONT_USE_YARN_BERRY_ITS_NOT_GOOD: true
       
       - uses: actions/upload-artifact@v3
         with:

@@ -20,7 +20,7 @@ module.exports = withTranspile({
     };
 
     // workaround for Yarn Berry, it tries to resolve react-native-web from @acme/ui
-    if (process.env.YARN_WORKAROUND) {
+    if (process.env.DONT_USE_YARN_BERRY_ITS_NOT_GOOD) {
       config.resolve.modules = [
         path.resolve(__dirname, 'node_modules'),
         path.resolve(__dirname, '../../node_modules'),
