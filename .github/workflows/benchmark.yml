@@ -178,12 +178,12 @@ jobs:
       - name: 🚀 Publish to Expo
         if: ${{ !github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: pnpm run publish-app --non-interactive
+        run: pnpm run publish-app -- --non-interactive
       
       - name: 🚀 Publish preview to Expo
         if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: pnpm run publish-app --non-interactive --release-channel=pr-${{ github.event.number }}
+        run: pnpm run publish-app -- --non-interactive --release-channel=pr-${{ github.event.number }}
 
       - name: 💬 Comment in preview
         if: ${{ github.event.number && matrix.app != 'web' }}
