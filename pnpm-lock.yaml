@@ -45,6 +45,7 @@ importers:
     specifiers:
       '@acme/ui': '*'
       '@babel/core': ^7.12.9
+      '@react-native/normalize-color': 1.0.0
       '@types/react': ~17.0.21
       '@types/react-native': ~0.64.12
       expo: ~44.0.0
@@ -65,6 +66,7 @@ importers:
       react-native-web: 0.17.1_w7o5yyljkiidx2s2nzb26ottzu
     devDependencies:
       '@babel/core': 7.18.13
+      '@react-native/normalize-color': 1.0.0
       '@types/react': 17.0.48
       '@types/react-native': 0.64.26
 
@@ -127,6 +129,9 @@ importers:
   apps/web:
     specifiers:
       '@acme/ui': '*'
+      '@types/node': ^16.0.0
+      '@types/react': ^18.0.0
+      '@types/react-dom': ^18.0.0
       babel-plugin-react-native-web: ^0.18.7
       eslint: 8.22.0
       eslint-config-next: 12.2.5
@@ -142,6 +147,9 @@ importers:
       react-dom: 18.2.0_react@18.2.0
       react-native-web: 0.18.7_biqbaboplfbrettd7655fr4n2y
     devDependencies:
+      '@types/node': 16.11.54
+      '@types/react': 18.0.17
+      '@types/react-dom': 18.0.6
       babel-plugin-react-native-web: 0.18.7
       eslint: 8.22.0
       eslint-config-next: 12.2.5_eslint@8.22.0
@@ -3980,6 +3988,10 @@ packages:
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
     dev: false
 
+  /@types/node/16.11.54:
+    resolution: {integrity: sha512-ryOpwe15+BtTUxKFfzABjaI/EtXLPBSBEW4B6D5ygWNcORLVKG/1/FC3WwAr5d7t6lCnlVPRsCY0NH680QT+Pg==}
+    dev: true
+
   /@types/node/18.7.9:
     resolution: {integrity: sha512-0N5Y1XAdcl865nDdjbO0m3T6FdmQ4ijE89/urOHLREyTXbpMWbSafx9y7XIsgWGtwUP2iYTinLyyW3FatAxBLQ==}
 
@@ -3990,6 +4002,12 @@ packages:
   /@types/q/1.5.5:
     resolution: {integrity: sha512-L28j2FcJfSZOnL1WBjDYp2vUHCeIFlyYI/53EwD/rKUBQ7MtUUfbQWiyKJGpcnv4/WgrhWsFKrcPstcAt/J0tQ==}
     dev: false
+
+  /@types/react-dom/18.0.6:
+    resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
+    dependencies:
+      '@types/react': 18.0.17
+    dev: true
 
   /@types/react-native/0.64.26:
     resolution: {integrity: sha512-L1U0+wM7GSq1uGu6d/Z9wKB705xyr7Pg47JiXjp9P8DZAFpqP4xsEM/PQ8hcCopEupo6ltQ8ipqoDJ4Nb9Lw5Q==}
