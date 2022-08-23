@@ -48,7 +48,14 @@ jobs:
 
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
-        run: npx expo export --public-url http:/127.0.0.1:8000 --experimental-bundle
+        run: npm run export
+      
+      - uses: actions/upload-artifact@v3
+        with:
+          name: npm-v7-${{ matrix.app }}
+          path: |
+            apps/${{matrix.app}}/dist
+            apps/${{matrix.app}}/out
   
   npm-v8:
     runs-on: ubuntu-latest
@@ -86,7 +93,14 @@ jobs:
 
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
-        run: npm run export --public-url http:/127.0.0.1:8000 --experimental-bundle
+        run: npm run export
+      
+      - uses: actions/upload-artifact@v3
+        with:
+          name: npm-v8-${{ matrix.app }}
+          path: |
+            apps/${{matrix.app}}/dist
+            apps/${{matrix.app}}/out
   
   pnpm-v6:
     runs-on: ubuntu-latest
@@ -126,7 +140,14 @@ jobs:
 
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
-        run: pnpm export --public-url http:/127.0.0.1:8000 --experimental-bundle
+        run: pnpm export
+      
+      - uses: actions/upload-artifact@v3
+        with:
+          name: pnpm-v6-${{ matrix.app }}
+          path: |
+            apps/${{matrix.app}}/dist
+            apps/${{matrix.app}}/out
 
   pnpm-v7:
     runs-on: ubuntu-latest
@@ -166,7 +187,14 @@ jobs:
 
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
-        run: pnpm export --public-url http:/127.0.0.1:8000 --experimental-bundle
+        run: pnpm export
+      
+      - uses: actions/upload-artifact@v3
+        with:
+          name: pnpm-v7-${{ matrix.app }}
+          path: |
+            apps/${{matrix.app}}/dist
+            apps/${{matrix.app}}/out
   
   yarn-v1:
     runs-on: ubuntu-latest
@@ -204,7 +232,14 @@ jobs:
 
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
-        run: yarn export --public-url http:/127.0.0.1:8000 --experimental-bundle
+        run: yarn export
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: yarn-v1-${{ matrix.app }}
+          path: |
+            apps/${{matrix.app}}/dist
+            apps/${{matrix.app}}/out
   
   yarn-v2:
     runs-on: ubuntu-latest
@@ -242,4 +277,11 @@ jobs:
 
       - name: 📱 Export bundle
         working-directory: apps/${{ matrix.app }}
-        run: yarn export --public-url http:/127.0.0.1:8000 --experimental-bundle
+        run: yarn export
+      
+      - uses: actions/upload-artifact@v3
+        with:
+          name: yarn-v2-${{ matrix.app }}
+          path: |
+            apps/${{matrix.app}}/dist
+            apps/${{matrix.app}}/out
