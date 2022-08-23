@@ -6,6 +6,11 @@ const withTranspile = require('next-transpile-modules')([
 /** @type {import('next').NextConfig} */
 module.exports = withTranspile({
   reactStrictMode: true,
+  experimental: {
+    images: {
+        unoptimized: true
+    }
+  },
   webpack: (config) => {
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
