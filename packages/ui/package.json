@@ -28,5 +28,8 @@
     "outDir": "build",
     "sourcemap": true,
     "splitting": false
+  },
+  "installConfig": {
+    "hoistingLimits": "workspaces"
   }
 }

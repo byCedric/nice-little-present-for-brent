@@ -44,6 +44,7 @@
   "version" "1.0.0"
   dependencies:
     "@acme/ui" "*"
+    "@expo/webpack-config" "^0.17.0"
     "expo" "~46.0.8"
     "expo-status-bar" "~1.4.0"
     "react" "18.0.0"
@@ -1306,10 +1307,18 @@
     "uuid" "^3.4.0"
     "wrap-ansi" "^7.0.0"
 
-"@expo/code-signing-certificates@^0.0.2":
+"@expo/code-signing-certificates@^0.0.2", "@expo/code-signing-certificates@0.0.2":
   "integrity" "sha512-vnPHFjwOqxQ1VLztktY+fYCfwvLzjqpzKn09rchcQE7Sdf0wtW5fFtIZBEFOOY5wasp8tXSnp627zrAwazPHzg=="
   "resolved" "https://registry.npmjs.org/@expo/code-signing-certificates/-/code-signing-certificates-0.0.2.tgz"
   "version" "0.0.2"
+  dependencies:
+    "node-forge" "^1.2.1"
+    "nullthrows" "^1.1.1"
+
+"@expo/code-signing-certificates@0.0.1":
+  "integrity" "sha512-m1AVZGsMgpXRLULQ331AZdxh1D64Qbcb6z7A19JmXUrCQu3591zPn1wjR6J63/Dzi00m5TR5w+9GvqnFY5X//Q=="
+  "resolved" "https://registry.npmjs.org/@expo/code-signing-certificates/-/code-signing-certificates-0.0.1.tgz"
+  "version" "0.0.1"
   dependencies:
     "node-forge" "^1.2.1"
     "nullthrows" "^1.1.1"
@@ -1632,7 +1641,7 @@
     "getenv" "^1.0.0"
     "sucrase" "^3.20.0"
 
-"@expo/metro-config@~0.3.18":
+"@expo/metro-config@~0.3.18", "@expo/metro-config@~0.3.19":
   "integrity" "sha512-R81sLbaeUBjN8IXcxiVx7GcpSj8z7szILl1b5yJDb38WdIFwxhrseA5wXaTT1yMhI+59w6n99T2qtFV2yD5qYA=="
   "resolved" "https://registry.npmjs.org/@expo/metro-config/-/metro-config-0.3.22.tgz"
   "version" "0.3.22"
@@ -5921,6 +5930,16 @@
     "@expo/config-plugins" "^4.0.2"
     "expo-dev-menu-interface" "0.4.1"
 
+"expo-eas-client@~0.2.0":
+  "integrity" "sha512-XlZr57iHxqo3+AT2TtcRipMuQEyXnTUAv7H5+KVvj6EEJEAHmwc9wZZdKzqf0MbVRUTOawZsl/b2iYanf+kQsQ=="
+  "resolved" "https://registry.npmjs.org/expo-eas-client/-/expo-eas-client-0.2.1.tgz"
+  "version" "0.2.1"
+
+"expo-eas-client@~0.3.0":
+  "integrity" "sha512-dBD00lJ629ayh5abbmgn6I1Z5NOaWM1iea2ODLd/EF1ZcS1P3yiPm6blpvL/tD+uewL8gxxmla/Ac+SiDdYAYA=="
+  "resolved" "https://registry.npmjs.org/expo-eas-client/-/expo-eas-client-0.3.0.tgz"
+  "version" "0.3.0"
+
 "expo-error-recovery@~3.0.3", "expo-error-recovery@~3.0.5":
   "integrity" "sha512-VM6OOecjt0aPu5/eCdGGJfNjvAZIemaQym0JF/+SA5IlLiPpEfbVCDTO/5yiS8Zb5fKpeABx+GCRmtfnFqvRRw=="
   "resolved" "https://registry.npmjs.org/expo-error-recovery/-/expo-error-recovery-3.0.5.tgz"
@@ -5995,6 +6014,11 @@
   "resolved" "https://registry.npmjs.org/expo-json-utils/-/expo-json-utils-0.2.1.tgz"
   "version" "0.2.1"
 
+"expo-json-utils@~0.3.0":
+  "integrity" "sha512-ceo0pWFJqRAsNjZWX3rVDhy+NDzmrBNFOdvW+HE4EHqlt+OEUu9INIYKO8fU+g3ifI0VcKqHfvvj5wKsSpvPBw=="
+  "resolved" "https://registry.npmjs.org/expo-json-utils/-/expo-json-utils-0.3.0.tgz"
+  "version" "0.3.0"
+
 "expo-keep-awake@~10.0.0", "expo-keep-awake@~10.0.2":
   "integrity" "sha512-Ro1lgyKldbFs4mxhWM+goX9sg0S2SRR8FiJJeOvaRzf8xNhrZfWA00Zpr+/3ocCoWQ3eEL+X9UF4PXXHf0KoOg=="
   "resolved" "https://registry.npmjs.org/expo-keep-awake/-/expo-keep-awake-10.0.2.tgz"
@@ -6016,6 +6040,13 @@
   "version" "0.2.4"
   dependencies:
     "expo-json-utils" "~0.2.0"
+
+"expo-manifests@~0.3.0":
+  "integrity" "sha512-zv2a4pzhbvxVjrTO4XEiP5THt4RwtxyJjfixFhDNfHtDQR7fS4h9sZSGX9ind+IS5SQJQ2ykfVAi8xnwP6zHaw=="
+  "resolved" "https://registry.npmjs.org/expo-manifests/-/expo-manifests-0.3.1.tgz"
+  "version" "0.3.1"
+  dependencies:
+    "expo-json-utils" "~0.3.0"
 
 "expo-modules-autolinking@>=0.8.1", "expo-modules-autolinking@0.10.3":
   "integrity" "sha512-av9ln2zwUt303g98raX7sDmESgL3SXs1sbbtIjh1rL7R0676XIUacIKgbydR0/4tMbOShWx14Z9fozpk9xIAJA=="
@@ -6080,6 +6111,14 @@
     "compare-versions" "^3.4.0"
     "invariant" "^2.2.4"
 
+"expo-modules-core@~0.4.8":
+  "integrity" "sha512-uCZA3QzF0syRaHwYY99iaNhnye4vSQGsJ/y6IAiesXdbeVahWibX4G1KoKNPUyNsKXIM4tqA+4yByUSvJe4AAw=="
+  "resolved" "https://registry.npmjs.org/expo-modules-core/-/expo-modules-core-0.4.10.tgz"
+  "version" "0.4.10"
+  dependencies:
+    "compare-versions" "^3.4.0"
+    "invariant" "^2.2.4"
+
 "expo-modules-core@0.11.4":
   "integrity" "sha512-8dEYICk7hUi1GPz5hWm8dBuZDGc+4Tm7zDhSIhKApo5jY/5vB4Bk+fjPo693iWn6pp3+XBHT8Ri8rJ3G7wH1vQ=="
   "resolved" "https://registry.npmjs.org/expo-modules-core/-/expo-modules-core-0.11.4.tgz"
@@ -6134,10 +6173,107 @@
   "resolved" "https://registry.npmjs.org/expo-status-bar/-/expo-status-bar-1.4.0.tgz"
   "version" "1.4.0"
 
+"expo-structured-headers@~2.0.0":
+  "integrity" "sha512-pCMjCNpVX8rTD0gwfa29ShUY2++4yxCXodvMWwQonvDtunp2UC3PlvGo82oBBOqsV0yKPN2rMO43tOYSH6lW0Q=="
+  "resolved" "https://registry.npmjs.org/expo-structured-headers/-/expo-structured-headers-2.0.0.tgz"
+  "version" "2.0.0"
+
+"expo-structured-headers@~2.1.0":
+  "integrity" "sha512-0up4sfHHsiK2YLpTwD/ssUD2oeSGzVUeARnu/itKAJO4zHqjpc+m8N1s7HPSJcdC7fdDpMjzcdrDasT0o+cOAw=="
+  "resolved" "https://registry.npmjs.org/expo-structured-headers/-/expo-structured-headers-2.1.1.tgz"
+  "version" "2.1.1"
+
+"expo-structured-headers@~2.2.0":
+  "integrity" "sha512-nY6GuvoS/U5XdhfBNmvXGRoGzIXywXpSZs2wdiP+FbS79P9UWyEqzgARrBTF+6pQxUVMs6/vdffxRpwhjwYPug=="
+  "resolved" "https://registry.npmjs.org/expo-structured-headers/-/expo-structured-headers-2.2.1.tgz"
+  "version" "2.2.1"
+
 "expo-updates-interface@~0.4.0":
   "integrity" "sha512-EUJaLnDAePikGEQT8w6gjCY3m/dlGgjZKVn5XBaxZMkHzOy3PDQo6QOcK/bcMdkA3CyNrvo6NCe+/7RHrgmK4A=="
   "resolved" "https://registry.npmjs.org/expo-updates-interface/-/expo-updates-interface-0.4.0.tgz"
   "version" "0.4.0"
+
+"expo-updates-interface@~0.5.0":
+  "integrity" "sha512-8BTaTl5pE5DYvqbJubnSH3rL55ay+wonPZe53f8CGj4PN3bV4UAQXbG9wFTDBtOaT982oyUUWdjUh/a1P3EVDw=="
+  "resolved" "https://registry.npmjs.org/expo-updates-interface/-/expo-updates-interface-0.5.2.tgz"
+  "version" "0.5.2"
+
+"expo-updates-interface@~0.6.0":
+  "integrity" "sha512-oQcGTsE8mSkSxENPlWjZPGoJpt3RFDNPuO5d8shBDxBb4ZNH/W2ojavSFQMaLbNMoS0bYQQhzbRNEIBd306QMg=="
+  "resolved" "https://registry.npmjs.org/expo-updates-interface/-/expo-updates-interface-0.6.0.tgz"
+  "version" "0.6.0"
+
+"expo-updates-interface@~0.7.0":
+  "integrity" "sha512-saThnbrYDSjKxfMFFguAvh5o5KGabvAOHItkJRwq2L3c0T/3q26Q0kM83880h/+TTtAVsl1+Vhny9d+ImD3yvQ=="
+  "resolved" "https://registry.npmjs.org/expo-updates-interface/-/expo-updates-interface-0.7.0.tgz"
+  "version" "0.7.0"
+
+"expo-updates@~0.10.15":
+  "integrity" "sha512-GHh1e0BwJY7aT+huGfneXpMhPKKkDIOBqCWyZDyTo7AWLj2C2ZCvgT2D9LWyl6v9WwxMEfO94RaYCQaayD/rfw=="
+  "resolved" "https://registry.npmjs.org/expo-updates/-/expo-updates-0.10.15.tgz"
+  "version" "0.10.15"
+  dependencies:
+    "@expo/config" "^5.0.9"
+    "@expo/config-plugins" "^4.0.2"
+    "@expo/metro-config" "~0.1.84"
+    "expo-manifests" "~0.2.2"
+    "expo-modules-core" "~0.4.8"
+    "expo-structured-headers" "~2.0.0"
+    "expo-updates-interface" "~0.4.0"
+    "fbemitter" "^2.1.1"
+    "resolve-from" "^5.0.0"
+    "uuid" "^3.4.0"
+
+"expo-updates@~0.11.7":
+  "integrity" "sha512-zmteCFOBj2OtDOZO5eGgFHR4EXZvFUv5DM56aMkZ6+PE/fo+8ZjNZLxkQWD33GXmXs/9jLCLKXPj2+6kCJvyhg=="
+  "resolved" "https://registry.npmjs.org/expo-updates/-/expo-updates-0.11.7.tgz"
+  "version" "0.11.7"
+  dependencies:
+    "@expo/config" "^6.0.6"
+    "@expo/config-plugins" "^4.0.2"
+    "@expo/metro-config" "~0.2.6"
+    "expo-manifests" "~0.2.2"
+    "expo-structured-headers" "~2.1.0"
+    "expo-updates-interface" "~0.5.0"
+    "fbemitter" "^2.1.1"
+    "resolve-from" "^5.0.0"
+    "uuid" "^3.4.0"
+
+"expo-updates@~0.13.4":
+  "integrity" "sha512-GrA88YT2WN0rY4+uDHm7Yb3Gt7hAtVkaGq3ANIDbtIDVarvnHJ4d7cSp0U+FAyhtJCOPRo0QjF/Gy8rpP/G4yw=="
+  "resolved" "https://registry.npmjs.org/expo-updates/-/expo-updates-0.13.4.tgz"
+  "version" "0.13.4"
+  dependencies:
+    "@expo/code-signing-certificates" "0.0.1"
+    "@expo/config" "~6.0.23"
+    "@expo/config-plugins" "^4.0.14"
+    "@expo/metro-config" "0.3.19"
+    "arg" "4.1.0"
+    "expo-eas-client" "~0.2.0"
+    "expo-manifests" "~0.3.0"
+    "expo-structured-headers" "~2.2.0"
+    "expo-updates-interface" "~0.6.0"
+    "fbemitter" "^3.0.0"
+    "resolve-from" "^5.0.0"
+    "uuid" "^3.4.0"
+
+"expo-updates@~0.14.4":
+  "integrity" "sha512-m6IOiETTwsJhL93meHG/Y3FWuaRQIbn9LJ5wpWurQ7RniqIV9Ae61SRmJJyYtxk1qLy/dKJ/jHyF1xp8PKIlnQ=="
+  "resolved" "https://registry.npmjs.org/expo-updates/-/expo-updates-0.14.5.tgz"
+  "version" "0.14.5"
+  dependencies:
+    "@expo/code-signing-certificates" "0.0.2"
+    "@expo/config" "~7.0.1"
+    "@expo/config-plugins" "~5.0.1"
+    "@expo/metro-config" "~0.3.19"
+    "arg" "4.1.0"
+    "expo-eas-client" "~0.3.0"
+    "expo-manifests" "~0.3.0"
+    "expo-structured-headers" "~2.2.0"
+    "expo-updates-interface" "~0.7.0"
+    "fbemitter" "^3.0.0"
+    "resolve-from" "^5.0.0"
+    "uuid" "^3.4.0"
 
 "expo@*", "expo@~43.0.2":
   "integrity" "sha512-GShSipvKxxIuG7EL196d5gscPV7t/bOFGTLVefRFk2wyfiNcnRflsVK5B3c0hh9j1n0VGy0n+pHkXWoLzyk9vg=="
