@@ -160,7 +160,7 @@ jobs:
           expo-token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 📦 Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: 👷 Build project
         run: pnpm run build
@@ -220,7 +220,7 @@ jobs:
           expo-token: ${{ secrets.EXPO_TOKEN }}
   
       - name: 📦 Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: 👷 Build project
         run: pnpm build
