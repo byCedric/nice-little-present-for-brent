@@ -50,12 +50,12 @@ jobs:
       - name: 🚀 Publish to Expo
         if: ${{ !github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: npm run publish --non-interactive
+        run: npm run publish
       
       - name: 🚀 Publish preview to Expo
         if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: npm run publish --release-channel=pr-${{ github.event.number }} --non-interactive
+        run: npm run publish --release-channel=pr-${{ github.event.number }}
 
       - name: 💬 Comment in preview
         if: ${{ github.event.number && matrix.app != 'web' }}
@@ -113,12 +113,12 @@ jobs:
       - name: 🚀 Publish to Expo
         if: ${{ !github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: npm run publish --non-interactive
+        run: npm run publish
       
       - name: 🚀 Publish preview to Expo
         if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: npm run publish --release-channel=pr-${{ github.event.number }} --non-interactive
+        run: npm run publish --release-channel=pr-${{ github.event.number }}
 
       - name: 💬 Comment in preview
         if: ${{ github.event.number && matrix.app != 'web' }}
@@ -178,12 +178,12 @@ jobs:
       - name: 🚀 Publish to Expo
         if: ${{ !github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: pnpm publish --non-interactive
+        run: pnpm publish
       
       - name: 🚀 Publish preview to Expo
         if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: pnpm publish --release-channel=pr-${{ github.event.number }} --non-interactive
+        run: pnpm publish --release-channel=pr-${{ github.event.number }}
 
       - name: 💬 Comment in preview
         if: ${{ github.event.number && matrix.app != 'web' }}
@@ -243,12 +243,12 @@ jobs:
       - name: 🚀 Publish to Expo
         if: ${{ !github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: pnpm publish --non-interactive
+        run: pnpm publish
       
       - name: 🚀 Publish preview to Expo 
         if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: pnpm publish --release-channel=pr-${{ github.event.number }} --non-interactive
+        run: pnpm publish --release-channel=pr-${{ github.event.number }}
 
       - name: 💬 Comment in preview
         if: ${{ github.event.number && matrix.app != 'web' }}
@@ -306,12 +306,12 @@ jobs:
       - name: 🚀 Publish to Expo
         if: ${{ !github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: yarn publish --non-interactive
+        run: yarn publish
       
       - name: 🚀 Publish preview to Expo
         if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: yarn publish --release-channel=pr-${{ github.event.number }} --non-interactive
+        run: yarn publish --release-channel=pr-${{ github.event.number }}
 
       - name: 💬 Comment in preview
         if: ${{ github.event.number && matrix.app != 'web' }}
@@ -369,12 +369,12 @@ jobs:
       - name: 🚀 Publish to Expo
         if: ${{ !github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: yarn publish --non-interactive
+        run: yarn publish
       
       - name: 🚀 Publish preview to Expo
         if: ${{ github.event.number && matrix.app != 'web' }}
         working-directory: apps/${{ matrix.app }}
-        run: yarn publish --release-channel=pr-${{ github.event.number }} --non-interactive
+        run: yarn publish --release-channel=pr-${{ github.event.number }}
 
       - name: 💬 Comment in preview
         if: ${{ github.event.number && matrix.app != 'web' }}
