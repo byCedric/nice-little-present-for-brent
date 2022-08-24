@@ -233,8 +233,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          cache: yarn
-
+      
       - name: 🏗 Setup Expo
         uses: expo/expo-github-action@v7
         with:
@@ -246,6 +245,18 @@ jobs:
 
       - name: 🏗 Setup yarn
         run: yarn set version berry && yarn --version
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+
+      - name: Restore yarn cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: yarn-berry-cache-folder-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
+          restore-keys: |
+            yarn-berry-cache-folder-
 
       - name: 📦 Install dependencies
         run: yarn install --no-immutable
