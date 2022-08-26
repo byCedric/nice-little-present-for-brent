@@ -42,7 +42,7 @@ All this package manager needs is the [workspaces](https://docs.npmjs.com/cli/v8
 ### pnpm
 
 Because pnpm uses a better but slightly different **node_modules** setup, we need to make some changes here.
-- First, create a [root **.npmrc**](https://github.com/byCedric/nice-little-present-for-brent/blob/main/.npmrc) file [containing `node-linker=hoisted`](https://pnpm.io/npmrc#node-linker). The `node-linker` will make pnpm use a **node_modules** structure that is compatible with React Native.
+- First, create a [root **.npmrc**](https://github.com/byCedric/nice-little-present-for-brent/blob/main/.npmrc) file [containing `node-linker=hoisted`](https://pnpm.io/npmrc#node-linker). The `node-linker` will make pnpm use a **node_modules** structure that is compatible with React Native, and disable Plug'n'Play.
 - Then create a [root **pnpm-workspace.yaml**](https://github.com/byCedric/nice-little-present-for-brent/blob/main/pnpm-workspace.yaml) where you [define the workspaces](https://pnpm.io/pnpm-workspace_yaml).
 - Optionally, because React Native libraries often have some peer dependency issues, you could disable failing on them. In this repository, we disabled all peer dependency [errors for `@babel/*` packages](https://github.com/byCedric/nice-little-present-for-brent/blob/main/package.json#L19-L25). But, you can also [set **.npmrc** to `strict-peer-dependencies=false`](https://pnpm.io/npmrc#strict-peer-dependencies).
 
