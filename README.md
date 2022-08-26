@@ -35,11 +35,11 @@ $ npm|pnpm|yarn dev
 
 Each package manager requires a specific config to work with React Native. Some newer packagers, like pnpm and yarn berry, have concepts like Plug'n'Play. Fundamentally, that doesn't work with React Native because we refer to Android/iOS files within the package. Since there is no Plug'n'Play concept in that area, we can't use it (yet).
 
-### NPM
+### npm
 
 All this package manager needs is the [workspaces](https://docs.npmjs.com/cli/v8/using-npm/workspaces) definition in [the root **package.json**](https://github.com/byCedric/nice-little-present-for-brent/blob/main/package.json#L4-L7).
 
-### PNPM
+### pnpm
 
 Because pnpm uses a better but slightly different **node_modules** setup, we need to make some changes here.
 - First, create a [root **.npmrc**](https://github.com/byCedric/nice-little-present-for-brent/blob/main/.npmrc) file [containing `node-linker=hoisted`](https://pnpm.io/npmrc#node-linker). The `node-linker` will make pnpm use a **node_modules** structure that is compatible with React Native.
