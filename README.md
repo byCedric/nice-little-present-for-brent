@@ -72,6 +72,6 @@ yarn berry (v3) | **25s**
 
 ## Configuring Metro
 
-After you've set up the preferred package manager, you'll still need to set up Metro. Usually, you could look this up [in our docs](https://docs.expo.dev/guides/monorepo). But due to [PR #18756](https://github.com/expo/expo/pull/18756) not being merged yet, [you can look this up here](https://github.com/expo/expo/blob/%40bycedric/docs/monorepo/docs/pages/guides/monorepos.md).
+After you've set up the preferred package manager, you'll still need to set up Metro. Usually, you could look this up [in our docs](https://docs.expo.dev/guides/monorepos). But due to [PR #18756](https://github.com/expo/expo/pull/18756) not being merged yet, [you can look this up here](https://github.com/expo/expo/blob/%40bycedric/docs/monorepo/docs/pages/guides/monorepos.md).
 
 Happy coding!
